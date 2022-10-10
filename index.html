@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest Number</title>
+</head>
+<body>
+    <h1>To find Largest number in an array</h1>
+    <h2>Open Console to view the largest number in an array.</h2>
+</body>
+</html>
+<script>
+
+let arr=[7,10,76,34,100,40];
+console.log("Array : ",arr);
+
+function toFindLargestNumber(arr){
+    
+    if(Array.isArray(arr))
+    {
+       let final=arr[0];
+       for(let i=0;i<arr.length;i++)
+       {
+        let currentElement=arr[i];
+        if(currentElement>final)
+        {
+            final=currentElement;
+        }
+       } 
+       return `Largest Number in the array is ${final}`;
+    }
+    else{
+        throw console.log("Input is invalid...");
+    }
+}
+
+console.log(toFindLargestNumber(arr));
+</script>
